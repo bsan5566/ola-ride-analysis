@@ -13,10 +13,10 @@ st.title("📝 OLA RIDE SQL INSIGHTS")
 st.markdown("---")
 st.subheader("📥 Download Sql Queries  Report")
 
-pbix_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/Sql_query/queries.sql"  
+sql_query = os.path.join("Sql_query", "queries.sql")  
 
-if os.path.exists(pbix_path):
-    with open(pbix_path, "rb") as f:
+if os.path.exists(sql_query):
+    with open(sql_query, "rb") as f:
         st.download_button(
             label="⬇️ Download queries.sql",
             data=f,
