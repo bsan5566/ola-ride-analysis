@@ -1,4 +1,4 @@
-# pages/2_Analytics.py
+# pages/5_view_Analytics.py
 import streamlit as st
 import plotly.express as px
 from Database.db import run_query
@@ -197,13 +197,11 @@ elif selected == "View Power BI Report":
             )
     else:
         st.error("⚠️ Power BI file not found. Please check the file path.")
-# ============================
 # 7. Queries for view analytics 
-# ============================
 elif selected == "Queries for view analytics":
     st.subheader("📥 Download Queries for view analytics")
 
-    view_analytics = os.path.join("Sql_query", "queries_view_analytics.sql"
+    view_analytics = os.path.join("Sql_query", "queries_view_analytics.sql")
 
     if os.path.exists(view_analytics):
         with open(view_analytics, "rb") as f:
@@ -214,4 +212,5 @@ elif selected == "Queries for view analytics":
                 mime="application/octet-stream"
             )
     else:
-        st.error("⚠️ Power BI file not found. Please check the file path.")
+        st.error("⚠️ Queries SQL file not found. Please check the file path.")
+
