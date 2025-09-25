@@ -13,7 +13,7 @@ dataset_dir = "Dataset"
 xlsx_file = "OLA_Dataset.xlsx"
 csv_file = "OLA_DataSet_Cleaned.csv"
 
-xlsx_path = os.path.join(dataset_dir, xlsx_file)
+xlsx_path = os.path.join("Dataset", "OLA_DataSet.xlsx")
 csv_path = os.path.join(dataset_dir, csv_file)
 
 # ============================
