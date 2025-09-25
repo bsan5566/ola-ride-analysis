@@ -17,15 +17,6 @@ xlsx_path = os.path.join("Dataset", "OLA_DataSet.xlsx")
 csv_path = os.path.join(dataset_dir, csv_file)
 
 # ============================
-# Debug: check paths
-# ============================
-st.write("**Debug Info:**")
-st.write("Current working directory:", os.getcwd())
-st.write("Dataset folder exists:", os.path.exists(dataset_dir))
-if os.path.exists(dataset_dir):
-    st.write("Files in Dataset folder:", os.listdir(dataset_dir))
-
-# ============================
 # 1️⃣ Raw Excel Dataset
 # ============================
 st.subheader("1️⃣ Raw Dataset (Excel)")
