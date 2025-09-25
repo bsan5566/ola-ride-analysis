@@ -8,8 +8,8 @@ st.title("📂 OLA Dataset Preview")
 # ============================
 # File Paths (adjust as needed)
 # ============================
-xlsx_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/Dataset/OLA_Dataset.xlsx"
-csv_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/Dataset/OLA_DataSet_Cleaned.csv"
+xlsx_path = os.path.join("Dataset", "OLA_Dataset.xlsx")
+csv_path = os.path.join("Dataset", "OLA_DataSet_Cleaned.csv")
 
 # ============================
 # Load & Display Excel
