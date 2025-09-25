@@ -11,7 +11,7 @@ st.title("📊 Power BI Analysis Questions (Visualized)")
 st.markdown("---")
 st.subheader("📥 Download Power BI Report")
 
-pbix_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/PowerBi_Files/ola.pbix"  
+pbix_path =  os.path.join("PowerBi_Files", "ola.pbix")  
 
 if os.path.exists(pbix_path):
     with open(pbix_path, "rb") as f:
