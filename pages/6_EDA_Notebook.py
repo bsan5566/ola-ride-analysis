@@ -7,7 +7,7 @@ st.title("📑 OLA Ride Analysis – EDA Notebook")
 # ============================
 # File Path (adjust as needed)
 # ============================
-eda_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/EDA/EDA_ola_ride_analysis.ipynb"
+eda_path = os.path.join("EDA", "EDA_ola_ride_analysis.ipynb")
 
 # ============================
 # Download Section
