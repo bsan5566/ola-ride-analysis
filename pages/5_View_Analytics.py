@@ -185,7 +185,7 @@ elif selected == "Ratings":
 elif selected == "View Power BI Report":
     st.subheader("📥 Download OLA RIDE VIEW Report")
 
-    pbix_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/PowerBi_Files/ola_ride_views.pbix"  
+    pbix_path = os.path.join("PowerBi_Files", "ola_ride_views.pbix")  
 
     if os.path.exists(pbix_path):
         with open(pbix_path, "rb") as f:
@@ -203,10 +203,10 @@ elif selected == "View Power BI Report":
 elif selected == "Queries for view analytics":
     st.subheader("📥 Download Queries for view analytics")
 
-    pbix_path = "C:/Users/B santosh/Downloads/ola/Ola_ride_/Sql_query/queries_view_analytics.sql"
+    view_analytics = os.path.join("Sql_query", "queries_view_analytics.sql"
 
-    if os.path.exists(pbix_path):
-        with open(pbix_path, "rb") as f:
+    if os.path.exists(view_analytics):
+        with open(view_analytics, "rb") as f:
             st.download_button(
                 label="⬇️ Download OLA Ride queries_view_analytics.sql",
                 data=f,
