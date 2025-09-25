@@ -9,3 +9,4 @@ openpyxl
 notebook
 jupyter
 plotly
+streamlit-option-menu
