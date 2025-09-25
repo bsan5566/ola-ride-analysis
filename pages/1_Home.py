@@ -54,8 +54,9 @@ The project involves:
 ---
 ### The downloadable files are available in the respective sections.
 - **Dataset files** in the "Dataset Preview" section
-- **SQL Queries** in the "SQL Queries Runner" section
+- **SQL Queries** in the "SQL Queries" section
 - **Power BI Report** in the "Power BI Questions" section
+- View Analysis in "View Analytics" section
 - **EDA Notebook** in the "EDA Report & Notebook" section
-- View Analysis in View Analytics section
+
 """)
