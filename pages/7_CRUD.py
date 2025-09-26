@@ -85,4 +85,26 @@ with tabs[3]:
                 st.error(f"⚠️ Could not delete data: {e}")
         else:
             st.error("❌ Please enter a valid Booking ID.")
+# --- Tabs for CRUD+Find ---
+tabs = st.tabs(["➕ Create", "📖 Read", "✏️ Update", "❌ Delete", "🔍 Find"])
+
+# --- FIND ---
+with tabs[4]:
+    st.subheader("Find Ride Record")
+
+    search_id = st.text_input("Enter Booking ID to Find")
+
+    if st.button("Find Record"):
+        if search_id.strip() != "":
+            try:
+                result = run_query("SELECT * FROM OLA_Data WHERE Booking_ID=%s", (search_id,))
+                if result:
+                    df = pd.DataFrame(result)
+                    st.dataframe(df)
+                else:
+                    st.info(f"ℹ️ No record found with Booking_ID={search_id}")
+            except Exception as e:
+                st.error(f"⚠️ Could not fetch data: {e}")
+        else:
+            st.error("❌ Please enter a valid Booking ID.")
 
