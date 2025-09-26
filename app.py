@@ -10,6 +10,7 @@ pages = {
     "📈 Power BI": st.Page("pages/4_PowerBI_Question_analytics.py", title="Power BI Questions"),
     "📊 View Analytics": st.Page("pages/5_View_Analytics.py", title="View Analytics"),
     "📑 EDA Notebook": st.Page("pages/6_EDA_Notebook.py", title="EDA Notebook"),
+    " 🛠 CRUD Operations": st.Page("pages/7_CRUD.py", title="CRUD Operations"),
  }
 
 # Navigation bar
