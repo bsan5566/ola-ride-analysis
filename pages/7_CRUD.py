@@ -73,9 +73,16 @@ with tabs[2]:
 # --- DELETE ---
 with tabs[3]:
     st.subheader("Delete Ride Record")
-    ids = run_query("SELECT Booking_ID FROM OLA_Data LIMIT 100")
-    id_list = [r["Booking_ID"] for r in ids]
-    delete_id = st.selectbox("Select Booking ID to Delete", id_list)
+
+    delete_id = st.text_input("Enter Booking ID to Delete")
+
     if st.button("Delete Record"):
-        run_query("DELETE FROM OLA_Data WHERE Booking_ID=%s", (delete_id,))
-        st.warning(f"⚠️ Record with Booking_ID={delete_id} deleted!")
+        if delete_id.strip() != "":
+            try:
+                run_query("DELETE FROM ola_data WHERE Booking_ID=%s", (delete_id,))
+                st.warning(f"⚠️ Record with Booking_ID={delete_id} deleted (if it existed).")
+            except Exception as e:
+                st.error(f"⚠️ Could not delete data: {e}")
+        else:
+            st.error("❌ Please enter a valid Booking ID.")
+
