@@ -22,7 +22,7 @@ def run_query(query, params=None):
         conn.close()
 
 # --- Tabs for CRUD ---
-tabs = st.tabs(["➕ Create", "📖 Read", "✏️ Update", "❌ Delete"])
+tabs = st.tabs(["➕ Create", "📖 Read", "✏️ Update", "❌ Delete","🔍 Find"])
 
 # --- CREATE ---
 with tabs[0]:
@@ -85,9 +85,6 @@ with tabs[3]:
                 st.error(f"⚠️ Could not delete data: {e}")
         else:
             st.error("❌ Please enter a valid Booking ID.")
-# --- Tabs for CRUD+Find ---
-tabs = st.tabs(["➕ Create", "📖 Read", "✏️ Update", "❌ Delete", "🔍 Find"])
-
 # --- FIND ---
 with tabs[4]:
     st.subheader("Find Ride Record")
