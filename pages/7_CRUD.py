@@ -79,7 +79,7 @@ with tabs[3]:
     if st.button("Delete Record"):
         if delete_id.strip() != "":
             try:
-                run_query("DELETE FROM ola_data WHERE Booking_ID=%s", (delete_id,))
+                run_query("DELETE FROM OLA_Data WHERE Booking_ID=%s", (delete_id,))
                 st.warning(f"⚠️ Record with Booking_ID={delete_id} deleted (if it existed).")
             except Exception as e:
                 st.error(f"⚠️ Could not delete data: {e}")
